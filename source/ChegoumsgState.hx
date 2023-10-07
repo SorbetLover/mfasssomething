@@ -9,7 +9,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
-import flixel.tweens.FlxTweenType;
+
 class ChegoumsgState extends FlxState
 {
 	var mfbackdrop:FlxBackdrop;
@@ -43,11 +43,10 @@ class ChegoumsgState extends FlxState
 
 	function startmovements()
 	{
-                FlxTween.tween(mfbackdrop, {x: mfbackdrop + 100}, 1, {ease: FlxEase.linear, type: FlxTweenType.LOOPING}); 
-		// mfbackdrop.x += 10;
-		// new FlxTimer().start(0.001, function(tmr:FlxTimer)
-		// {
-		// 	startmovements();
-		// });
+		mfbackdrop.x += 10;
+		new FlxTimer().start(0.001, function(tmr:FlxTimer)
+		{
+			startmovements();
+		});
 	}
 }
