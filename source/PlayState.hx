@@ -1,4 +1,3 @@
-
 package;
 
 import Char;
@@ -168,37 +167,33 @@ class PlayState extends FlxState
 	}
 
 	var canshoot:Bool = true;
-        var curBull:Int = 1;
+
 	function shoot()
 	{
-		for(i in curBull){
-		i.alpha = 1;
-			
+		bullet.alpha = 1;
 
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
 		{
-			i.alpha = 0;
+			bullet.alpha = 0;
 		});
 		if (canshoot == true)
 		{
 			switch (lastfacing)
 			{
 				case "left":
-					i.x = char.x - 100;
-					i.flipX = true;
-					FlxTween.tween(i, {x: i.x - 4000}, 0.5, {ease: FlxEase.linear});
+					bullet.x = char.x - 100;
+					bullet.flipX = true;
+					FlxTween.tween(bullet, {x: bullet.x - 4000}, 0.5, {ease: FlxEase.linear});
 				case "right":
 					bullet.x = char.x + 200;
 					bullet.flipX = false;
-					FlxTween.tween(bullet, {x: i.x + 4000}, 0.5, {ease: FlxEase.linear});
+					FlxTween.tween(bullet, {x: bullet.x + 4000}, 0.5, {ease: FlxEase.linear});
 			}
 		}
 		canshoot = false;
-		new FlxTimer().start(0.3, function(tmr:FlxTimer)
+		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 		{
 			canshoot = true;
 		});
-	curBull += 1;
-}
-}
+	}
 }
