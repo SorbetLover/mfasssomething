@@ -57,29 +57,29 @@ class PlayState extends FlxState
 		bullet.scale.set(3, 3);
 		add(bullet);
 
-		bullet2 = new FlxSprite().loadGraphic("assets/images/bulet.png");
-		bullet2.scale.set(3, 3);
-		add(bullet2);
+		// bullet2 = new FlxSprite().loadGraphic("assets/images/bulet.png");
+		// bullet2.scale.set(3, 3);
+		// add(bullet2);
 
-		bullet3 = new FlxSprite().loadGraphic("assets/images/bulet.png");
-		bullet3.scale.set(3, 3);
-		add(bullet3);
+		// bullet3 = new FlxSprite().loadGraphic("assets/images/bulet.png");
+		// bullet3.scale.set(3, 3);
+		// add(bullet3);
 
-		bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
-		bullet4.scale.set(3, 3);
-		add(bullet4);
+		// bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
+		// bullet4.scale.set(3, 3);
+		// add(bullet4);
 
-		bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
-		bullet4.scale.set(3, 3);
-		add(bullet4);
+		// bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
+		// bullet4.scale.set(3, 3);
+		// add(bullet4);
 
-		bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
-		bullet4.scale.set(3, 3);
-		add(bullet);
+		// bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
+		// bullet4.scale.set(3, 3);
+		// add(bullet);
 
-		bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
-		bullet4.scale.set(3, 3);
-		add(bullet);
+		// bullet4 = new FlxSprite().loadGraphic("assets/images/bulet.png");
+		// bullet4.scale.set(3, 3);
+		// add(bullet);
 
 		ground.y = char.y + char.height;
 	}
