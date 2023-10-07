@@ -1,4 +1,4 @@
-name: CI
+name: Builds
 
 on: [push, pull_request, workflow_dispatch, repository_dispatch]
 
