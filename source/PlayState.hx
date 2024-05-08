@@ -176,20 +176,29 @@ class PlayState extends FlxState
 		{
 			bullet.alpha = 0;
 		});
+		// if (canshoot == true)
+		// {
+		// 	switch (lastfacing)
+		// 	{
+		// 		case "left":
+		// 			bullet.x = char.x - 100;
+		// 			bullet.flipX = true;
+		// 			FlxTween.tween(bullet, {x: bullet.x - 4000}, 0.5, {ease: FlxEase.linear});
+		// 		case "right":
+		// 			bullet.x = char.x + 200;
+		// 			bullet.flipX = false;
+		// 			FlxTween.tween(bullet, {x: bullet.x + 4000}, 0.5, {ease: FlxEase.linear});
+		// 	}
+		// }
+
 		if (canshoot == true)
 		{
-			switch (lastfacing)
-			{
-				case "left":
-					bullet.x = char.x - 100;
-					bullet.flipX = true;
-					FlxTween.tween(bullet, {x: bullet.x - 4000}, 0.5, {ease: FlxEase.linear});
-				case "right":
-					bullet.x = char.x + 200;
-					bullet.flipX = false;
-					FlxTween.tween(bullet, {x: bullet.x + 4000}, 0.5, {ease: FlxEase.linear});
-			}
+            bullet.x = char.x;
+			bullet.y = char.y;
+			FlxTween.tween(bullet, {x: FlxG.mouse.x, y: FlxG.mouse.y}, 0.5, {ease: FlxEase.linear});
+
 		}
+
 		canshoot = false;
 		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 		{
