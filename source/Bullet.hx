@@ -12,6 +12,7 @@ class Bullet extends FlxSprite
 		super(x, y);
 		loadGraphic("assets/images/bulet.png");
 		scale.set(3, 3);
-		antialiasing = false;
+		antialiasing = false; 
+		
 	}
 }
