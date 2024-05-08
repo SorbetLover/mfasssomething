@@ -14,6 +14,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
+import flixel.math.FlxAngle;
 import flixel.util.FlxTimer;
 
 class PlayState extends FlxState
@@ -193,9 +194,26 @@ class PlayState extends FlxState
 
 		if (canshoot == true)
 		{
+			var shitY:Float = 0;
+			var shitX:Float = 0;
+			if(FlxG.mouse.x > FlxG.width / 2){
+				 shitX = -1000;
+			}
+			if(FlxG.mouse.x < FlxG.width / 2){
+				 shitX = 1000;
+			}
+			if(FlxG.mouse.y > FlxG.height / 2){
+				 shitY = 1000;
+			}
+			if(FlxG.mouse.y < FlxG.height / 2){
+				 shitY = -1000;
+			}
+			
+			
             bullet.x = char.x;
 			bullet.y = char.y;
-			FlxTween.tween(bullet, {x: FlxG.mouse.x, y: FlxG.mouse.y}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(bullet, {x:  shitX + FlxG.mouse.x, y: shitY + FlxG.mouse.y}, 0.5, {ease: FlxEase.linear});
+			bullet.angle = FlxAngle.angleBetweenMouse(char, true);
 
 		}
 
@@ -203,6 +221,8 @@ class PlayState extends FlxState
 		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 		{
 			canshoot = true;
+
+			
 		});
 	}
 }
