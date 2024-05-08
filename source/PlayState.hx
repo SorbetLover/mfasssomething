@@ -221,8 +221,6 @@ class PlayState extends FlxState
 		new FlxTimer().start(0.6, function(tmr:FlxTimer)
 		{
 			canshoot = true;
-
-			
 		});
 	}
 }
